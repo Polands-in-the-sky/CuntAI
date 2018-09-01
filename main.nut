@@ -7,14 +7,14 @@ function MyNewAI::Start()
 {
     AICompany.SetName("Annoying Cunt")
     while (AIEventController.IsEventWaiting()) {
-  local e = AIEventController.GetNextEvent();
-  switch (e.GetEventType()) {
-    case AIEvent.AI_ET_VEHICLE_CRASHED:
-      local ec = AIEventVehicleCrashed.Convert(e);
-      local v  = ec.GetVehicleID();
-      AILog.Info("We have a crashed vehicle (" + v + ")");
-      /* Handle the crashed vehicle */
-      break;
+    local e = AIEventController.GetNextEvent();
+    switch (e.GetEventType()) {
+        case AIEvent.AI_ET_VEHICLE_CRASHED:
+            local ec = AIEventVehicleCrashed.Convert(e);
+            local v  = ec.GetVehicleID();
+            AILog.Info("We have a crashed vehicle (" + v + ")");
+             /* Handle the crashed vehicle */
+            break;
     }
 }
   while (true) {
